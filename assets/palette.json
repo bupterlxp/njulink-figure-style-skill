@@ -1,0 +1,24 @@
+{
+  "ink": "#242424",
+  "ink_muted": "#686868",
+  "line": "#7F7F7F",
+  "grid": "#D8D8D8",
+  "paper": "#FFFFFF",
+  "panel": "#FAFAF8",
+  "categorical": [
+    "#57BDB5",
+    "#85B9E2",
+    "#B6A4D8",
+    "#E5A1AF",
+    "#F39A83",
+    "#F4C6A5",
+    "#E6C35C",
+    "#A9C995"
+  ],
+  "status": {
+    "error": "#D95F5F",
+    "success": "#58A889",
+    "warning": "#E6C35C",
+    "info": "#5B8CCB"
+  }
+}
