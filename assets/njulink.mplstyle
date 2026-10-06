@@ -11,18 +11,18 @@ font.size: 8
 axes.titlesize: 10
 axes.titleweight: semibold
 axes.labelsize: 8
-axes.labelcolor: #242424
-axes.edgecolor: #7F7F7F
+axes.labelcolor: "#242424"
+axes.edgecolor: "#7F7F7F"
 axes.linewidth: 0.8
 axes.facecolor: white
 axes.grid: True
 axes.grid.axis: y
 axes.axisbelow: True
-grid.color: #D8D8D8
+grid.color: "#D8D8D8"
 grid.linewidth: 0.6
 grid.alpha: 0.58
-xtick.color: #686868
-ytick.color: #686868
+xtick.color: "#686868"
+ytick.color: "#686868"
 xtick.labelsize: 7.5
 ytick.labelsize: 7.5
 xtick.major.width: 0.7
@@ -34,6 +34,6 @@ legend.handletextpad: 0.45
 lines.linewidth: 1.6
 lines.markersize: 4.0
 patch.linewidth: 0.8
-patch.edgecolor: #7F7F7F
-text.color: #242424
-axes.prop_cycle: cycler('color', ['#57BDB5', '#85B9E2', '#B6A4D8', '#E5A1AF', '#F39A83', '#F4C6A5', '#E6C35C', '#A9C995'])
+patch.edgecolor: "#7F7F7F"
+text.color: "#242424"
+axes.prop_cycle: cycler('color', ['57BDB5', '85B9E2', 'B6A4D8', 'E5A1AF', 'F39A83', 'F4C6A5', 'E6C35C', 'A9C995'])

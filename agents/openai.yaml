@@ -1,7 +1,7 @@
 interface:
   display_name: "NJU-LINK Figure Style"
-  short_description: "NJU-LINK 科研图表语法与可复现绘图实践工具包"
-  default_prompt: "Use $njulink-figure-style to recreate this research figure with the NJU-LINK visual grammar."
+  short_description: "NJU-LINK 科研画风与参考图库：选图、部件组合、重画、对照验收"
+  default_prompt: "Use $njulink-figure-style to choose a gallery layout, apply the NJU-LINK visual grammar, and render my data with a side-by-side reference comparison."
 
 policy:
   allow_implicit_invocation: true

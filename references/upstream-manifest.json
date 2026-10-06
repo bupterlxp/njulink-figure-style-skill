@@ -1,0 +1,271 @@
+{
+  "repository": "https://github.com/liouhai/plot-is-all-you-need",
+  "commit": "70898b877dc2455704070e4542db1939ff7d9ec0",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 qc",
+  "upstream_gallery_images": 364,
+  "imported_templates": [
+    "alluvial-stages-outlined",
+    "bubble-matrix-upper",
+    "dependence-small-multiples",
+    "grouped-stacked-rounded-bars",
+    "interaction-ring-waterfall",
+    "model-results-panel",
+    "pred-vs-obs-model-grid",
+    "raincloud-median-badges",
+    "ranked-bars-rose-ring",
+    "shap-bars-beeswarm-spine",
+    "shap-beeswarm-blue-pink",
+    "stacked-bars-two-part-rank",
+    "stacked-percent-bars-ribbons",
+    "violin-median-badges"
+  ],
+  "files": [
+    {
+      "path": "gallery/alluvial-stages-outlined.md",
+      "upstream_sha256": "26a580caa77881d8b22b0aef2fa2adaa5faf3abd77516a233270c87e7f24a977",
+      "modified": true,
+      "modification": "Trim trailing whitespace only; content unchanged."
+    },
+    {
+      "path": "gallery/alluvial-stages-outlined.png",
+      "upstream_sha256": "055ca03c62c91d66ab1ef821712e6b3f9c3a869af9740a1a36344860df32af8e",
+      "modified": false
+    },
+    {
+      "path": "gallery/alluvial-stages-outlined.py",
+      "upstream_sha256": "8856b0456e8a675ea4d1c3c9eda9d66c198ac46fa20f16826de4a814e6ea86a3",
+      "modified": false
+    },
+    {
+      "path": "gallery/bubble-matrix-upper.md",
+      "upstream_sha256": "a6ed9af4bb45e232413895d8869e68c23345a766cc47e859e1e0c779f46f370b",
+      "modified": false
+    },
+    {
+      "path": "gallery/bubble-matrix-upper.png",
+      "upstream_sha256": "de1e43a4de39406b28eb57e40b5e84fadcf594079227309e8dc175f90218eddf",
+      "modified": false
+    },
+    {
+      "path": "gallery/bubble-matrix-upper.py",
+      "upstream_sha256": "4ede264d0ce679289fc2cfa93431cd24695c2ec9556d7ae9ffbe8cf19aab5319",
+      "modified": false
+    },
+    {
+      "path": "gallery/dependence-small-multiples.md",
+      "upstream_sha256": "705c12bbda1b42776599a9685580b760f3a2fca312beeedfd9851e58994a7412",
+      "modified": true,
+      "modification": "Trim trailing whitespace only; content unchanged."
+    },
+    {
+      "path": "gallery/dependence-small-multiples.png",
+      "upstream_sha256": "84f64f847e3496dfd18c7e5a3ce589b609d1a58a0d1d87d47dfabcf5e30eaa96",
+      "modified": false
+    },
+    {
+      "path": "gallery/dependence-small-multiples.py",
+      "upstream_sha256": "d6d39ffb4446ee0f4b83c11acdb7472ad191f83b34e07a59d37bcfde80f84fbe",
+      "modified": false
+    },
+    {
+      "path": "gallery/grouped-stacked-rounded-bars.md",
+      "upstream_sha256": "9caf5e88a690730d20fdb7a66f69ca7b65ae5c4e976719bd6a9766fc0a2d4290",
+      "modified": true,
+      "modification": "Trim trailing whitespace only; content unchanged."
+    },
+    {
+      "path": "gallery/grouped-stacked-rounded-bars.png",
+      "upstream_sha256": "0e23c144a159e700094a3768aaf0580159a7ef595ded9190c73dbe96460681e7",
+      "modified": false
+    },
+    {
+      "path": "gallery/grouped-stacked-rounded-bars.py",
+      "upstream_sha256": "67f3eb1100cd09bbea782c17e6fcc9d17db90c14d4437036cecad9a3a634afa2",
+      "modified": false
+    },
+    {
+      "path": "gallery/interaction-ring-waterfall.md",
+      "upstream_sha256": "84053d3fdaf478fd218baad8993aa78e6668b0824c25ce5a97d6da43e7de87f6",
+      "modified": true,
+      "modification": "Trim trailing whitespace only; content unchanged."
+    },
+    {
+      "path": "gallery/interaction-ring-waterfall.png",
+      "upstream_sha256": "674bfb119dcbf5e9eed47f3869d39a763409a535a53f48119e3a31585b7c58cc",
+      "modified": false
+    },
+    {
+      "path": "gallery/interaction-ring-waterfall.py",
+      "upstream_sha256": "74358af81905a7826025116bfccb53fd0679e35dca6cd8f807f1b4a47ac1cab2",
+      "modified": false
+    },
+    {
+      "path": "gallery/model-results-panel.md",
+      "upstream_sha256": "2198ed10a277aafd2fc68252f2a9c8596775acd21ed6077d9fc0c04f2c7daf56",
+      "modified": false
+    },
+    {
+      "path": "gallery/model-results-panel.png",
+      "upstream_sha256": "975408d010c61084985aef1d5e3b2ed46e46be27bae7b99b1ac8c1d195aeffae",
+      "modified": false
+    },
+    {
+      "path": "gallery/model-results-panel.py",
+      "upstream_sha256": "3563ace61a53f7f490d0a5ed18377b13b22dfa9c001bc17feb529ca71313ff44",
+      "modified": false
+    },
+    {
+      "path": "gallery/pred-vs-obs-model-grid.md",
+      "upstream_sha256": "81bbb1664af33d6bf428ea4bca1ff6bca4d944dc75f4b57131c144d7aac49405",
+      "modified": false
+    },
+    {
+      "path": "gallery/pred-vs-obs-model-grid.png",
+      "upstream_sha256": "5b13ba1a7729905f351f86c6d0d2e4fd89193bd66887f22f2787d94659d1b0a2",
+      "modified": false
+    },
+    {
+      "path": "gallery/pred-vs-obs-model-grid.py",
+      "upstream_sha256": "4371c0e46f8717275fcfdba1a97f57661b757c841c965ee77629d2d81fd78d0a",
+      "modified": false
+    },
+    {
+      "path": "gallery/raincloud-median-badges.md",
+      "upstream_sha256": "413fc188aede519b9ab6472c4579b48e0839f6f6c1bc461145b0a0bbe51fe8e5",
+      "modified": true,
+      "modification": "Trim trailing whitespace only; content unchanged."
+    },
+    {
+      "path": "gallery/raincloud-median-badges.png",
+      "upstream_sha256": "d42c9189ca52ab7d26acc206746d8c7aa6b2d4d2d926e2dd0e4d996b9a188543",
+      "modified": false
+    },
+    {
+      "path": "gallery/raincloud-median-badges.py",
+      "upstream_sha256": "707bd810a080a8ca7d88815dad0367406040ae75931c3c07fde066f088a44301",
+      "modified": false
+    },
+    {
+      "path": "gallery/ranked-bars-rose-ring.csv",
+      "upstream_sha256": "5a6d09a05cdb8e681343dfa11e2cf0a82b005e24a38f36050b830eac421b14ed",
+      "modified": false
+    },
+    {
+      "path": "gallery/ranked-bars-rose-ring.md",
+      "upstream_sha256": "8a447395949668505324048466403d181cecc622a10dfd8c5b7b572991a3843c",
+      "modified": true,
+      "modification": "Trim trailing whitespace only; content unchanged."
+    },
+    {
+      "path": "gallery/ranked-bars-rose-ring.png",
+      "upstream_sha256": "1f0495fc41cdc17b33ca5bf4dbe6a1d84d8488a45b753695d46921f02a0c0c16",
+      "modified": false
+    },
+    {
+      "path": "gallery/ranked-bars-rose-ring.py",
+      "upstream_sha256": "7339c8e44f2ebccc742589b4af198d335ed19b271cd969c5e5058f0051283393",
+      "modified": false
+    },
+    {
+      "path": "gallery/shap-bars-beeswarm-spine.md",
+      "upstream_sha256": "c42786b6e39884ffc0256d52dd01f4ae5dc53ce841b4a2ddeb4eee477b0b900b",
+      "modified": true,
+      "modification": "Trim trailing whitespace only; content unchanged."
+    },
+    {
+      "path": "gallery/shap-bars-beeswarm-spine.png",
+      "upstream_sha256": "b7670700b1f19f8dfb6ecc8d4086d5d19604d6449d37fc8f19acb5ca6328b576",
+      "modified": false
+    },
+    {
+      "path": "gallery/shap-bars-beeswarm-spine.py",
+      "upstream_sha256": "f34600d3fa449bb5717383ccb75e188fc6a728abf9f5e09013416728660be12f",
+      "modified": false
+    },
+    {
+      "path": "gallery/shap-beeswarm-blue-pink.md",
+      "upstream_sha256": "de7c1f5ebffbb1dcfc6925bf920e84bebe6e7f64f310b56fa7ec399e67ebe534",
+      "modified": true,
+      "modification": "Trim trailing whitespace only; content unchanged."
+    },
+    {
+      "path": "gallery/shap-beeswarm-blue-pink.png",
+      "upstream_sha256": "73cad13da0f109c92cc40b6afcd3bea6f345c579a4c68586a109d52b0064e59f",
+      "modified": false
+    },
+    {
+      "path": "gallery/shap-beeswarm-blue-pink.py",
+      "upstream_sha256": "cf66ed9231daa1f35cefc4f81399aa5f44ff4f8f45e1bfa99eb79acb24d084cb",
+      "modified": false
+    },
+    {
+      "path": "gallery/stacked-bars-two-part-rank.md",
+      "upstream_sha256": "94b3ebdd92fe30595a366f4a4fe8ca71b01e361e723ced42290f80e5f2bb5b82",
+      "modified": true,
+      "modification": "Trim trailing whitespace only; content unchanged."
+    },
+    {
+      "path": "gallery/stacked-bars-two-part-rank.png",
+      "upstream_sha256": "abe799c6e46dcd82207cc233e98af26a3ccd3c38743e6959874fd9fb147bfb94",
+      "modified": false
+    },
+    {
+      "path": "gallery/stacked-bars-two-part-rank.py",
+      "upstream_sha256": "89dbc7187d5aa8531e5435b80ebfc3b1d10d6c85b31f429adb83dec50de25eb9",
+      "modified": false
+    },
+    {
+      "path": "gallery/stacked-percent-bars-ribbons.md",
+      "upstream_sha256": "6fefddd03bda32d8b78e11e0c548d3af7fa36c910ff94c6a6b7abdc475c046a4",
+      "modified": true,
+      "modification": "Trim trailing whitespace only; content unchanged."
+    },
+    {
+      "path": "gallery/stacked-percent-bars-ribbons.png",
+      "upstream_sha256": "89d0b58fcb2980cbe843e718fb73cdef144f6cfcb4ac3bb52d385519d1d97d37",
+      "modified": false
+    },
+    {
+      "path": "gallery/stacked-percent-bars-ribbons.py",
+      "upstream_sha256": "9c08892df361724595dc9729a06b4697453aa64cfa78414c518d3cb891549714",
+      "modified": false
+    },
+    {
+      "path": "gallery/violin-median-badges.md",
+      "upstream_sha256": "0edf8134b9a887dae4c85754d63f4fb6144759d6efb5bfdc5323d61a16506c29",
+      "modified": true,
+      "modification": "Trim trailing whitespace only; content unchanged."
+    },
+    {
+      "path": "gallery/violin-median-badges.png",
+      "upstream_sha256": "fc667f06672c79ebf08544e5a326abe5335b8746c8218e60347eeb5c69d4af08",
+      "modified": false
+    },
+    {
+      "path": "gallery/violin-median-badges.py",
+      "upstream_sha256": "8fc1457f380aa9ce75cbbbeeb88a0e6817283a3f0e3fbc8bba95fa61f23d0e1f",
+      "modified": false
+    },
+    {
+      "path": "scripts/cards.py",
+      "upstream_sha256": "d3efe032fb7bdf6127ef4bb9cf96f19382e5b26eae188623915ac925bc091e07",
+      "modified": true
+    },
+    {
+      "path": "scripts/build_index.py",
+      "upstream_sha256": "132f39060df7e525460f69014a2507f6e72613245d1c2888072df8f8e8ada967",
+      "modified": true
+    },
+    {
+      "path": "scripts/contact_sheet.py",
+      "upstream_sha256": "8bbda11363728c59260bf6f6db89a32a0c1e8f2fc602db7f1783270c050b6a31",
+      "modified": true
+    },
+    {
+      "path": "scripts/ingest.py",
+      "upstream_sha256": "a4c0d135e820deca4f421cd6710c5edd8591298ffe4d68c3db9f7450f657cd04",
+      "modified": true
+    }
+  ]
+}

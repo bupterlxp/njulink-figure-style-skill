@@ -1,92 +1,68 @@
 ---
 name: njulink-figure-style
-description: "Use when creating or revising research figures in the observable NJU-LINK/Jiaming Wang visual grammar: pastel modular diagrams, evidence-first charts, radar/sunburst/heatmap panels, typography, spacing, and reproducible Matplotlib code. Apply it as a visual-system study from public papers, not as a claim of personal authorship or a copy of source artwork."
+description: "Create, reproduce, and review research figures using NJU-LINK visual presets and a curated Plot Is All You Need gallery. Select visual references, combine layout and palette, render user data with reproducible Python, and compare results side by side. Includes gallery maintenance."
 metadata:
-  short-description: "NJU-LINK 科研图表语法与可复现绘图实践工具包"
+  short-description: "NJU-LINK 风格 × 看图选图、部件组合与可复现绘图"
 ---
 
 # NJU-LINK Figure Style
 
-这个技能把公开论文中可观察、可复用的视觉规则整理成绘图系统。目标是高保真复刻版式、色彩、线型、信息层级和图表结构，让新图看起来属于同一套研究视觉语法；它不复制原论文的图片、图标、数据或文字，也不把合作者共同完成的图表归因给某一个作者。
+将 NJU-LINK 论文视觉语法与 Plot Is All You Need 的“鉴赏 → 选图 → 演绎 → 对照”结合。支持参考图高保真重画、数据驱动的新图、成图审查和个人图库维护。不要把共同作者论文的视觉特征归因为某个人的独家风格。
 
-## 何时使用
+## 先选入口
 
-当用户要做以下事情时触发：
-
-- 按 NJU-LINK 论文风格重画流程图、框架图、radar、sunburst、heatmap、bar chart、qualitative panel 或 benchmark figure；
-- 从 Jiaming Wang / NJU-LINK 的公开论文或项目页提炼图表风格；
-- 审查现有科研图是否符合该视觉语法，并给出可执行的修改或 Matplotlib 代码；
-- 把一张参考图拆成布局、视觉 token、组件和可复现脚本。
-
-纯粹的海报、品牌宣传图、网页 UI 或与科研图无关的插画不应触发本技能。
-
-## 证据边界与来源
-
-本技能基于 [references/paper-corpus.md](references/paper-corpus.md) 中的公开主页、arXiv、项目页和 NJU-LINK GitHub 仓库快照。论文往往由多人共同完成，因此将结果称为“Jiaming Wang/NJU-LINK corpus 的可观察视觉语法”，而不是未经作者确认的个人签名风格。若用户要求“所有论文”，先检查该语料的更新时间和来源，再说明是否是主页精选集、NJU-LINK 组织仓库集，还是某个时间范围内的可核验全集。
-
-不要把原论文 PDF、原始 figure、受版权保护的图标、数据或 logo 放进生成仓库。引用来源和复刻说明写入文档；新图使用同等功能的抽象图标、合成数据或用户拥有的素材。
-
-## 标准工作流
-
-### 1. 确定图的任务
-
-先把图的任务写成一句话：展示流程、解释机制、比较模型、分解错误、描述数据分布，还是呈现定性案例。每张主图只保留一个阅读终点；需要同时表达“流程 + 结果”时，拆成编号子图并共享视觉 token。
-
-### 2. 选择图形骨架
-
-从 [references/figure-grammar.md](references/figure-grammar.md) 选择最接近的骨架：
-
-- **模块化流程**：左到右 3–6 个阶段，圆角卡片、编号圆点、细箭头和少量图标；
-- **数据/评测总览**：中心主题 + 环形/旭日/玫瑰分解，旁接 2–5 个小统计图；
-- **多模型比较**：radar 或分组 bar，少量半透明填充，图例置于底部；
-- **机制/错误分析**：sunburst + heatmap + 小型分布图，使用同一类别色；
-- **定性案例**：图像/视频帧外加彩色边框、虚线分组和短标签，显式区分输入、输出、预期和评分。
-
-不要从默认 Matplotlib 图开始堆装饰。先画白底网格、面板边界和信息流，再放数据和图标。
-
-## 具体调用例子
-
-把用户请求先归入下面最接近的形状，再决定代码和交付物：
-
-| 用户请求 | 主骨架 | 应交付的关键内容 |
+| 请求 | 动作 | 按需读取 |
 |---|---|---|
-| “把数据清洗、检索、推理、审核画成一张方法总览图” | 模块化流程 | 3–6 张圆角卡片、编号徽章、左到右箭头、每卡一个动作 |
-| “比较三个模型在召回、鲁棒性、成本和覆盖率上的差异” | Radar / 分组 bar | 统一量纲、同一类别颜色、底部图例、避免超过 5–6 条重叠曲线 |
-| “分析不同阶段和错误类型的失败率” | Heatmap + 小统计图 | 连续色阶、格内数值、缺失值与低值区分、图注写清方向和单位 |
+| 有参考图，要求同款或接近一比一 | 看原图，测量六部件，直接重画并输出对照 | [参考工作流](references/gallery-workflow.md) |
+| 有数据，想选画法 | 自己读数据，展示匹配候选；方向明确时直接画 | [图库索引](gallery/INDEX.md)、相关卡片 |
+| “直接画”“你定”，或已选好样式 | 完成首选，不强制选图轮次 | [视觉语法](references/figure-grammar.md) |
+| “A 的布局 + B 的配色” | 写六部件来源表；连续与类别配色分别处理 | [参考工作流](references/gallery-workflow.md) |
+| 审查成品 | 核对数值和视觉映射，展示并排图与差异 | [对照验收](references/gallery-workflow.md#4-对照验收) |
+| 加图、整理图库、改卡片 | 使用本地入库工具，保留用户编辑与来源 | [图库维护](references/gallery-workflow.md#5-图库维护) |
+| 扩充 NJU-LINK 论文风格语料 | 核验作者和来源，更新语料范围再归纳 | [论文索引](references/paper-corpus.md) |
 
-例如，用户说“用 NJU-LINK 风格重画我的 agent pipeline”，应先追问或从上下文确定阶段名称、输入/输出和主结论，然后调用 `draw_pipeline`；用户说“只想看模型比较”，不要额外堆流程卡片。代码级参考见 [`README.md`](README.md) 的最小例子和 [`scripts/demo.py`](scripts/demo.py)。
+上游版本和 MIT 许可见 [整合记录](references/upstream-integration.md)。公开图库有 14 套上游自产示例及 3 张 NJU-LINK 改绘；未导入上游论文截图。先检索索引，再打开匹配图片和卡片，不要起手读取整个图库。
 
-交付时至少给出：图意图、选用骨架、数据到视觉元素的映射、可运行脚本、PNG/PDF 导出路径，以及缩小到论文栏宽后的可读性检查结果。
+## 样式如何合并
 
-一个可直接查看的合成结果见 [`examples/njulink-style-demo.png`](examples/njulink-style-demo.png)；它不是任何论文的原图，也不包含论文数据。
+优先级：**用户明确选择 → 用户参考图/六部件组合 → NJU-LINK 默认 token**。图库扩大图形结构，NJU-LINK 提供默认皮肤；新图库不是 NJU-LINK 论文的风格证据。
 
-### 3. 应用视觉 token
+- 接近一比一：测量宽高比、面板归一化坐标、留白、轴域、文字层级、字体、线宽和颜色。差异表区分有意改动、缺少字体/素材、尚未匹配；仅换配色不能称为高保真。
+- 默认用白底、近黑文字、浅色模块、细圆角边框、轻网格和稳定类别色，参数见 [figure-grammar.md](references/figure-grammar.md)。
+- 六部件：结构布局、图形元素、配色、文字与标注、装饰细节、图例与色条。用户指定的特点优先；默认 token 不禁止其他风格。
+- 连续值使用连续色阶，正负值考虑零中心发散色，类别才用 pastel cycle。记录单位、归一化和面积/长度编码。
 
-读取 [references/figure-grammar.md](references/figure-grammar.md) 的 token；代码实现位于 [scripts/njulink_style.py](scripts/njulink_style.py)，可直接导入。默认规则包括：
+## 四步完成
 
-- 白底与近黑文字，浅色填充承载类别，彩色只用于语义区分；
-- 8 色以内的低饱和 pastel cycle；同一类别跨子图保持同色；
-- 圆角 8–12 px、1.2–1.6 pt 细边框、虚线分组边界、1.4–1.8 pt 主箭头；
-- 图表弱网格、少边框、短标签、底部图例，避免阴影、渐变和厚重 3D 效果；
-- 论文正文用兼容的衬线字体，图内标签优先 Arial/DejaVu Sans/Calibri 类无衬线，代码用等宽字体；
-- 标题、阶段编号、动作标签、数据细节按四级信息层级递减。
+1. **读数据与看参考。** 自己读取文件，判断分组、范围、缺失和图意图。仅在无法推断且影响科学含义时提问。
+2. **定结构与部件。** 要求选图时展示少量实质不同的候选或真实数据草图；明确参考则直接执行。用 [contact_sheet.py](scripts/contact_sheet.py) 展示候选、配色与成品对照。
+3. **用数据重画。** 优先复用卡片 code 脚本或 [njulink_style.py](scripts/njulink_style.py)。记录排序、变换、随机种子和字体。复制到工作目录后修改，保留原始数据。缺数据的样稿在画面标明 SIMULATED DATA；不把合成数值补进真实结果。
+4. **渲染后验收。** 打开 PNG 对照参考，抽查极值、总和、分组、轴范围和图例。修复遮挡、截断、对比度和缺字，再按论文栏宽检查。像素差不能单独证明科学含义或风格匹配。
 
-### 4. 生成并复核
+## 可运行资源
 
-优先运行 `python scripts/demo.py --output-dir <dir>` 检查工具链，再用 `njulink_style.py` 生成实际图。保存 PNG（300 dpi）和 PDF/SVG 矢量版本；检查：
+命令从 skill 根目录运行；脚本也支持绝对路径。依赖见 [requirements.txt](requirements.txt)，优先使用现有或项目虚拟环境。
 
-1. 关键结论在缩小到论文栏宽后仍可读；
-2. 颜色在灰度和色觉缺陷模拟下仍有文字/线型冗余编码；
-3. 面板、箭头、标题和图例在同一基线/网格上；
-4. 同一类别在所有子图中颜色、缩写、顺序一致；
-5. 没有复制原图的像素、数据、句子或独家图标；
-6. 图注能独立解释输入、操作、输出和度量。
+~~~bash
+# 原有流程图、radar、bar、heatmap
+python scripts/demo.py --output-dir figures/base
 
-### 5. 按模式交付
+# 三种结构用 NJU-LINK token 改绘，输出 PNG/PDF/SVG
+python scripts/gallery_examples.py --output-dir figures/njulink
 
-- **复刻模式**：输出参考图拆解、token 表、布局草图、可运行代码和逐项差异清单；
-- **新图模式**：输出图意图、骨架、数据映射、色彩语义、代码和导出参数；
-- **审查模式**：按 0–2 分检查版式、层级、颜色一致性、可读性、可复现性和来源记录；
-- **文献模式**：先更新论文清单与来源，再总结哪些特征跨论文稳定、哪些只属于单篇实验。
+# 复制上游模板及数据到工作目录，渲染 PNG/PDF/SVG
+python scripts/render_gallery.py raincloud-median-badges --out figures/reference
 
-默认交付顺序是：**图意图 → 选用骨架 → 视觉 token → 面板布局 → 数据映射 → 可运行脚本 → QA 清单 → 来源与限制**。
+# 候选样板册、对照图与色卡
+python scripts/contact_sheet.py sheet --out figures/options.png "raincloud-median-badges::上游布局" "njulink-raincloud::NJU-LINK 配色"
+python scripts/contact_sheet.py compare --out figures/compare.png --labels "参考,改绘" raincloud-median-badges njulink-raincloud
+python scripts/contact_sheet.py swatches --out figures/palette.png njulink-raincloud
+~~~
+
+查看 [改绘对照图](examples/plot-integration-demo.png)、[上游图库预览](examples/plot-gallery-preview.png)、[原有综合示例](examples/njulink-style-demo.png)。上游参考保留原配色；改绘展示结构与默认皮肤的组合，不宣称像素一致。
+
+## 交付和保存
+
+交付最终图片、PNG + PDF/SVG、可运行脚本、数据来源/变换说明、参考对照及已知差异。不要只交提示词或让用户运行代码才能看到结果。
+
+研究图留在项目目录或 Git 忽略的 gallery-local/；用户要求入库才维护图库，既有公开授权可沿用。taste.md 只记录用户明确表达的偏好；edited: true 卡片不能自动重写。公开材料保留来源与许可。具体命令见 [图库维护](references/gallery-workflow.md#5-图库维护)。

@@ -18,6 +18,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.axes import Axes
 from matplotlib.figure import Figure
+from matplotlib.image import AxesImage
 from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
 
 
@@ -380,11 +381,12 @@ def heatmap(
     cmap: str = "RdYlBu_r",
     annotate: bool = True,
     fmt: str = ".2f",
-) -> None:
+) -> AxesImage:
     """Draw a compact annotated heatmap with subtle cell boundaries."""
 
     arr = np.asarray(data, dtype=float)
     im = ax.imshow(arr, cmap=cmap, aspect="auto")
+    ax.grid(False)
     ax.set_xticks(np.arange(arr.shape[1]))
     ax.set_yticks(np.arange(arr.shape[0]))
     if col_labels is not None:
@@ -396,13 +398,17 @@ def heatmap(
     ax.grid(which="minor", color=PAPER, linewidth=0.55)
     ax.tick_params(which="minor", bottom=False, left=False)
     if annotate:
-        midpoint = np.nanmean(arr)
         for i in range(arr.shape[0]):
             for j in range(arr.shape[1]):
                 value = arr[i, j]
                 if np.isnan(value):
+                    ax.text(j, i, "n/a", ha="center", va="center", fontsize=6.2, color=INK)
                     continue
-                ax.text(j, i, format(value, fmt), ha="center", va="center", fontsize=6.2, color=PAPER if value > midpoint else INK)
+                rgb = np.asarray(im.cmap(im.norm(value))[:3])
+                linear = np.where(rgb <= 0.04045, rgb/12.92, ((rgb+0.055)/1.055)**2.4)
+                luminance = float(linear @ np.array([0.2126, 0.7152, 0.0722]))
+                color = PAPER if luminance < 0.179 else INK
+                ax.text(j, i, format(value, fmt), ha="center", va="center", fontsize=6.2, color=color)
     for spine in ax.spines.values():
         spine.set_visible(False)
     return im
