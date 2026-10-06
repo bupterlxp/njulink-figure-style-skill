@@ -44,6 +44,22 @@ metadata:
 
 不要从默认 Matplotlib 图开始堆装饰。先画白底网格、面板边界和信息流，再放数据和图标。
 
+## 具体调用例子
+
+把用户请求先归入下面最接近的形状，再决定代码和交付物：
+
+| 用户请求 | 主骨架 | 应交付的关键内容 |
+|---|---|---|
+| “把数据清洗、检索、推理、审核画成一张方法总览图” | 模块化流程 | 3–6 张圆角卡片、编号徽章、左到右箭头、每卡一个动作 |
+| “比较三个模型在召回、鲁棒性、成本和覆盖率上的差异” | Radar / 分组 bar | 统一量纲、同一类别颜色、底部图例、避免超过 5–6 条重叠曲线 |
+| “分析不同阶段和错误类型的失败率” | Heatmap + 小统计图 | 连续色阶、格内数值、缺失值与低值区分、图注写清方向和单位 |
+
+例如，用户说“用 NJU-LINK 风格重画我的 agent pipeline”，应先追问或从上下文确定阶段名称、输入/输出和主结论，然后调用 `draw_pipeline`；用户说“只想看模型比较”，不要额外堆流程卡片。代码级参考见 [`README.md`](README.md) 的最小例子和 [`scripts/demo.py`](scripts/demo.py)。
+
+交付时至少给出：图意图、选用骨架、数据到视觉元素的映射、可运行脚本、PNG/PDF 导出路径，以及缩小到论文栏宽后的可读性检查结果。
+
+一个可直接查看的合成结果见 [`examples/njulink-style-demo.png`](examples/njulink-style-demo.png)；它不是任何论文的原图，也不包含论文数据。
+
 ### 3. 应用视觉 token
 
 读取 [references/figure-grammar.md](references/figure-grammar.md) 的 token；代码实现位于 [scripts/njulink_style.py](scripts/njulink_style.py)，可直接导入。默认规则包括：
