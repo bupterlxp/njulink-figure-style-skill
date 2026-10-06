@@ -10,6 +10,37 @@
 
 这些图使用不同的模拟数据，展示结构和视觉部件的迁移，不表示相同实验结果，也不宣称像素级复刻。三张改绘的 [代码](scripts/gallery_examples.py) 可生成 PNG、PDF、SVG；需要贴近一比一时按指定参考图测量布局、字体与色值。
 
+## T2AV-Compass 的精髓图参考
+
+你指出的 T2AV-Compass 主图确实应该作为显式参考入口。下面三张图直接从 NJU-LINK 官方仓库的固定 commit 加载，方便在 GitHub 上查看 radial comparison、prompt pipeline、六面板 radar 和层级 sunburst。原图仍由官方项目托管；本仓库只记录链接、版本和哈希，没有把未声明统一许可的原始二进制复制进来。完整说明见 [T2AV-Compass 参考锚点](references/t2av-compass.md)。
+
+<p>
+  <img src="https://raw.githubusercontent.com/NJU-LINK/T2AV-Compass/7575ae07cf969c3f5d439644ecb9979862370523/docs/static/images/main_00.jpg" alt="T2AV-Compass official overview reference" width="100%">
+</p>
+<p><em>主图：放射状模型比较 + 分布/条形统计 + 多层 sunburst。它是这套 skill 里“总览—证据—层级”组合的首要参考。</em></p>
+
+<p>
+  <img src="https://raw.githubusercontent.com/NJU-LINK/T2AV-Compass/7575ae07cf969c3f5d439644ecb9979862370523/docs/static/images/datapipe.jpg" alt="T2AV-Compass official prompt pipeline reference" width="100%">
+</p>
+<p><em>流程图：大虚线容器、浅色圆角阶段、短标签和模态色。</em></p>
+
+<p>
+  <img src="https://raw.githubusercontent.com/NJU-LINK/T2AV-Compass/7575ae07cf969c3f5d439644ecb9979862370523/docs/static/images/radar_six_panels_integrated.svg" alt="T2AV-Compass official six-panel radar reference" width="100%">
+</p>
+<p><em>比较图：用 small multiples 保持多维评测可读，跨面板复用颜色语义。</em></p>
+
+需要离线查看上述同一版本时运行：
+
+~~~bash
+python scripts/fetch_t2av_references.py
+~~~
+
+下载内容会进入 Git 忽略的 `reference-cache/t2av-compass/`，脚本会逐个校验 SHA-256。公开可分发的独立重绘示例在 [t2av-compass-style-demo.png](examples/t2av-compass-style-demo.png)，生成代码在 [t2av_style_demo.py](scripts/t2av_style_demo.py)；它使用合成数据和自造标签，不复制 T2AV 原图。
+
+![T2AV-Compass-inspired independent reimplementation](examples/t2av-compass-style-demo.png)
+
+上图把 T2AV 的三段证据关系压缩成一张可运行示例：左侧 radial，中部分布与横向条，右侧三层 sunburst。它是结构迁移示例，不代表 T2AV 的实验结果。
+
 ## 这次整合了什么
 
 | 能力 | 入口 |
@@ -20,6 +51,7 @@
 | 按数据选图、“A 的布局 + B 的配色”、六部件拆解 | [参考工作流](references/gallery-workflow.md) |
 | 候选样板册、成品对照、配色卡 | [contact_sheet.py](scripts/contact_sheet.py) |
 | 本地图库入库、重复检查、索引重建 | [ingest.py](scripts/ingest.py)、[build_index.py](scripts/build_index.py) |
+| T2AV-Compass 官方锚点、离线抓取与独立重绘 | [参考文档](references/t2av-compass.md)、[fetch_t2av_references.py](scripts/fetch_t2av_references.py)、[t2av_style_demo.py](scripts/t2av_style_demo.py) |
 
 原有风格预设是默认值；用户指定的参考和部件组合优先。上游样例仍保留各自原配色，不能把整个新图库都称为 NJU-LINK 原有风格。
 
@@ -60,6 +92,9 @@ python3 -m venv .venv
 
 # 三张 NJU-LINK 改绘：PNG / PDF / SVG
 .venv/bin/python scripts/gallery_examples.py --output-dir figures/njulink
+
+# T2AV-Compass 视觉结构独立重绘：PNG / PDF
+.venv/bin/python scripts/t2av_style_demo.py --output-dir figures/t2av
 
 # 上游模板：复制代码/CSV 到工作目录，并输出 PNG / PDF / SVG
 .venv/bin/python scripts/render_gallery.py raincloud-median-badges --out figures/reference

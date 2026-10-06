@@ -3,6 +3,7 @@ __pycache__/
 .DS_Store
 demo-output/
 gallery-local/
+reference-cache/
 taste.md
 figures/
 .venv/

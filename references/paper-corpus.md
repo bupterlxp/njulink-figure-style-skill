@@ -21,6 +21,19 @@
 | 8 | **CodeTracer: Towards Traceable Agent** | arXiv | [arXiv:2604.11641](https://arxiv.org/abs/2604.11641) · [code](https://github.com/NJU-LINK/CodeTracer) · [project page](https://nju-link.github.io/CodeTracer/) | 彩色阶段框、分层 trace 树、Venn、黑色 takeaway 条 |
 | 9 | **A Survey of Linear Attention: Algorithm, Theory, Application, and Infrastructure** | Survey / TechRxiv | [TechRxiv PDF](https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.177032877.70562626/v1) · [code](https://github.com/btzyd/Awesome-Linear-Attention-Survey) | 主页没有 cover；本次未能从 TechRxiv 下载 PDF，因此不把它的图形细节纳入高置信度规则 |
 
+## T2AV-Compass 图级参考索引
+
+T2AV-Compass 的“精髓图”不再只停留在论文条目里，而是固定到项目仓库同一 commit 的图像资源。以下链接用于视觉观察和复现前测量；没有把原始文件作为本 skill 的公开资产提交。
+
+| 官方资源 | 适合观察的部件 | 固定版本 |
+|---|---|---|
+| [main_00.jpg](https://github.com/NJU-LINK/T2AV-Compass/blob/7575ae07cf969c3f5d439644ecb9979862370523/docs/static/images/main_00.jpg) · [raw](https://raw.githubusercontent.com/NJU-LINK/T2AV-Compass/7575ae07cf969c3f5d439644ecb9979862370523/docs/static/images/main_00.jpg) | radial comparison、分布图、横向条、三层 sunburst 的总览编排 | `7575ae07cf969c3f5d439644ecb9979862370523` |
+| [datapipe.jpg](https://github.com/NJU-LINK/T2AV-Compass/blob/7575ae07cf969c3f5d439644ecb9979862370523/docs/static/images/datapipe.jpg) | 大虚线容器、阶段卡片、短箭头、LLM/人工 QA 交接 | 同上 |
+| [radar_six_panels_integrated.svg](https://github.com/NJU-LINK/T2AV-Compass/blob/7575ae07cf969c3f5d439644ecb9979862370523/docs/static/images/radar_six_panels_integrated.svg) | small multiples、共享轴语义、跨面板颜色复用 | 同上 |
+| [avbench_00.jpg](https://github.com/NJU-LINK/T2AV-Compass/blob/7575ae07cf969c3f5d439644ec9979862370523/docs/static/images/avbench_00.jpg) | prompt 高亮、视频 filmstrip、音频波形、定性分数 | 同上 |
+
+精确文件哈希、离线抓取命令和许可边界见 [t2av-compass-assets.json](t2av-compass-assets.json) 与 [t2av-compass.md](t2av-compass.md)。
+
 ## NJU-LINK 组织仓库中的作者核验
 
 公开 README 的 BibTeX 中明确出现 `Jiaming Wang` 的仓库至少包括：
@@ -37,4 +50,3 @@
 > Figure grammar adapted from publicly available NJU-LINK/Jiaming Wang paper figures; layout and palette are independently reimplemented with synthetic/user-owned data.
 
 如需发布原始图片、项目 logo 或论文数据，必须另行核对许可证和作者/项目要求。
-

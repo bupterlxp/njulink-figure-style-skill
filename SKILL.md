@@ -20,8 +20,11 @@ metadata:
 | 审查成品 | 核对数值和视觉映射，展示并排图与差异 | [对照验收](references/gallery-workflow.md#4-对照验收) |
 | 加图、整理图库、改卡片 | 使用本地入库工具，保留用户编辑与来源 | [图库维护](references/gallery-workflow.md#5-图库维护) |
 | 扩充 NJU-LINK 论文风格语料 | 核验作者和来源，更新语料范围再归纳 | [论文索引](references/paper-corpus.md) |
+| 复用 T2AV-Compass 精髓图的视觉关系 | 先看官方主图/流水线/radar，再用自己的数据独立重绘 | [T2AV 参考锚点](references/t2av-compass.md) |
 
 上游版本和 MIT 许可见 [整合记录](references/upstream-integration.md)。公开图库有 14 套上游自产示例及 3 张 NJU-LINK 改绘；未导入上游论文截图。先检索索引，再打开匹配图片和卡片，不要起手读取整个图库。
+
+T2AV-Compass 的官方参考图单独列在 [t2av-compass.md](references/t2av-compass.md)：主图的 radial + distribution + hierarchical sunburst、prompt pipeline 和六面板 radar 都通过固定 commit 的外链展示。由于官方仓库没有为这些图片声明统一再分发许可，不要把原始图片提交到公开 skill；需要离线查看时使用 [fetch_t2av_references.py](scripts/fetch_t2av_references.py) 写入被忽略的缓存。公开交付使用 [t2av_style_demo.py](scripts/t2av_style_demo.py) 的独立重绘，并标注合成数据。
 
 ## 样式如何合并
 
@@ -57,9 +60,12 @@ python scripts/render_gallery.py raincloud-median-badges --out figures/reference
 python scripts/contact_sheet.py sheet --out figures/options.png "raincloud-median-badges::上游布局" "njulink-raincloud::NJU-LINK 配色"
 python scripts/contact_sheet.py compare --out figures/compare.png --labels "参考,改绘" raincloud-median-badges njulink-raincloud
 python scripts/contact_sheet.py swatches --out figures/palette.png njulink-raincloud
+
+# T2AV-Compass 视觉关系独立重绘
+python scripts/t2av_style_demo.py --output-dir figures/t2av
 ~~~
 
-查看 [改绘对照图](examples/plot-integration-demo.png)、[上游图库预览](examples/plot-gallery-preview.png)、[原有综合示例](examples/njulink-style-demo.png)。上游参考保留原配色；改绘展示结构与默认皮肤的组合，不宣称像素一致。
+查看 [改绘对照图](examples/plot-integration-demo.png)、[上游图库预览](examples/plot-gallery-preview.png)、[原有综合示例](examples/njulink-style-demo.png) 和 [T2AV 独立重绘](examples/t2av-compass-style-demo.png)。上游参考保留原配色；改绘展示结构与默认皮肤的组合，不宣称像素一致。
 
 ## 交付和保存
 

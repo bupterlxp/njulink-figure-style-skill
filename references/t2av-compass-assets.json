@@ -1,0 +1,43 @@
+{
+  "project": "T2AV-Compass",
+  "repository": "https://github.com/NJU-LINK/T2AV-Compass",
+  "commit": "7575ae07cf969c3f5d439644ecb9979862370523",
+  "license_status": "The repository did not declare a single license for these image assets at the pinned commit; keep them as external references unless permission is obtained.",
+  "assets": [
+    {
+      "file": "main_00.jpg",
+      "role": "hero overview: radial comparison, distribution plots, and hierarchical sunburst",
+      "sha256": "ae817879054960a85e3b9ac1d49bcaa79f3cd709bf7fa85ba69e4a2343e61872"
+    },
+    {
+      "file": "datapipe.jpg",
+      "role": "prompt/data pipeline with dashed grouping, rounded stages, and QA handoff",
+      "sha256": "aadd1bd6e22811f05ece67b5399f2a0a40728fd9d07519067d7041b9b28490ac"
+    },
+    {
+      "file": "avbench_00.jpg",
+      "role": "qualitative multimodal panel: prompt, filmstrip, waveform, and score annotations",
+      "sha256": "41c2426e3b23a120592044230296f59cd51d6cfdd9b16cff05a8e913464fb06a"
+    },
+    {
+      "file": "pipeline.svg",
+      "role": "vector pipeline reference",
+      "sha256": "6d7221f54ef090e9bd2fbfc9952ea4df51b62885bcd0a458057478622dc7ec33"
+    },
+    {
+      "file": "radar_six_panels_integrated.svg",
+      "role": "six-panel radar comparison",
+      "sha256": "a80c1a9a60769f814a37d24acf3b4573a905e58a392c82e73f7821daef1a3b5a"
+    },
+    {
+      "file": "data_stats.svg",
+      "role": "dataset statistics and category overview",
+      "sha256": "cba042bdc2ba9ba2dd405fe1c7bbef891259a381ed3a59aac605a86d45e4c9d5"
+    },
+    {
+      "file": "video_if_6groups_gradient.svg",
+      "role": "video-frame and multimodal grouping reference",
+      "sha256": "0fcb4949dd5f57f87367e6cfb4c559b314f1353b10b48dadc4089ce2b437f78e"
+    }
+  ]
+}
