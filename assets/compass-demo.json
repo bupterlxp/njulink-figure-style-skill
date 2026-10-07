@@ -1,0 +1,37 @@
+{
+  "data_status": "SIMULATED DATA — illustrative benchmark, not paper results",
+  "seed": 37,
+  "trials_per_axis": 100,
+  "score_unit": "percent passed; 0–100, higher is better",
+  "models": ["Atlas", "Mosaic", "Echo", "Lumen", "Orbit", "Slate"],
+  "model_colors": ["#7583DF", "#B0A0D9", "#A6D7BC", "#EFB795", "#DBBE7D", "#C8CDD3"],
+  "axes": ["Video match", "Audio match", "AV sync", "Visual quality", "Audio quality", "Temporal", "Physics"],
+  "scores": [
+    [89, 84, 87, 90, 79, 82, 85],
+    [85, 81, 80, 86, 78, 76, 80],
+    [80, 86, 83, 79, 83, 79, 74],
+    [78, 75, 76, 84, 73, 81, 77],
+    [73, 72, 70, 77, 70, 74, 69],
+    [68, 69, 64, 71, 67, 70, 63]
+  ],
+  "corpora": [
+    {"name": "Templates", "color": "#D78391", "log_mean": 3.9, "log_sigma": 0.30, "n": 700},
+    {"name": "Scene notes", "color": "#77A5CF", "log_mean": 4.35, "log_sigma": 0.26, "n": 700},
+    {"name": "Composed", "color": "#7CBA9E", "log_mean": 4.9, "log_sigma": 0.22, "n": 700}
+  ],
+  "taxonomy": [
+    {"name": "Alignment", "color": "#788DC7", "dimensions": [
+      {"name": "Video match", "color": "#8194D8", "leaves": ["Actors", "Actions", "Layout"]},
+      {"name": "Audio match", "color": "#AB91C9", "leaves": ["Speech", "Effects", "Music"]},
+      {"name": "AV sync", "color": "#D08CA4", "leaves": ["Onsets", "Rhythm", "Events"]}
+    ]},
+    {"name": "Perception", "color": "#639FA6", "dimensions": [
+      {"name": "Visual quality", "color": "#79ABC6", "leaves": ["Texture", "Light", "Detail"]},
+      {"name": "Audio quality", "color": "#73B9AF", "leaves": ["Clarity", "Timbre", "Space"]}
+    ]},
+    {"name": "Stability", "color": "#D0A068", "dimensions": [
+      {"name": "Temporal", "color": "#D9B763", "leaves": ["ID hold", "Motion", "Smooth"]},
+      {"name": "Physics", "color": "#D5A08B", "leaves": ["Contact", "Gravity", "Causes"]}
+    ]}
+  ]
+}

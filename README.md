@@ -2,7 +2,26 @@
 
 把 NJU-LINK 科研图的视觉语法与 [Plot Is All You Need](https://github.com/liouhai/plot-is-all-you-need) 的看图选图工作流整合为一个 skill：**挑参考 → 组合布局与配色 → 用自己的数据重画 → 并排验收**。仍通过 `$njulink-figure-style` 调用。
 
-## 先看整合后的效果
+## 综合成图
+
+以一个完整的多模态评测问题组织画面：上方是文本与视频/音频两条支路，经过整理、描述和审核形成测试集；下方是七方向能力比较、提示词分布、两组约束通过率和三层任务环图。
+
+![NJU-LINK 多模态评测综合成图](examples/njulink-style-demo.png)
+
+[PNG 原尺寸](examples/njulink-style-demo.png) · [矢量 PDF](examples/njulink-style-demo.pdf) · [SVG](examples/njulink-style-demo.svg) · [生成脚本](scripts/demo.py) · [数据](assets/compass-demo.json) · [构图说明](references/compass-composition.md)
+
+所有数值为合成值。布局参照 T2AV-Compass 的主图与数据流程图，帧带、波形、中心图案和流程部件独立绘制。径向图和横向条形图读取同一份得分，模型颜色、顺序和数值保持一致；环图表达任务层级，不代表样本占比。
+
+<details>
+<summary>查看综合示例重做前后</summary>
+
+![综合示例重做前后对照](examples/njulink-demo-before-after.png)
+
+重做集中在面板比例、信息密度、共享数据、字体和具体流程部件。旧图取自提交 `7738b4c`。
+
+</details>
+
+## 图库结构与配色组合
 
 上排是上游 MIT 自产示例，下排是本项目的 NJU-LINK 改绘：保留雨云图、百分比连接带、上三角气泡矩阵的结构，使用统一的字体、pastel 类别色和连续强度色。
 
@@ -12,7 +31,7 @@
 
 ## T2AV-Compass 的精髓图参考
 
-你指出的 T2AV-Compass 主图确实应该作为显式参考入口。下面三张图直接从 NJU-LINK 官方仓库的固定 commit 加载，方便在 GitHub 上查看 radial comparison、prompt pipeline、六面板 radar 和层级 sunburst。原图仍由官方项目托管；本仓库只记录链接、版本和哈希，没有把未声明统一许可的原始二进制复制进来。完整说明见 [T2AV-Compass 参考锚点](references/t2av-compass.md)。
+下面三张图直接从 NJU-LINK 官方仓库的固定 commit 加载，可查看 radial comparison、prompt pipeline、六面板 radar 和层级 sunburst。原图由官方项目托管，本仓库记录链接、版本和哈希。完整说明见 [T2AV-Compass 参考锚点](references/t2av-compass.md)。
 
 <p>
   <img src="https://raw.githubusercontent.com/NJU-LINK/T2AV-Compass/7575ae07cf969c3f5d439644ecb9979862370523/docs/static/images/main_00.jpg" alt="T2AV-Compass official overview reference" width="100%">
@@ -39,13 +58,14 @@ python scripts/fetch_t2av_references.py
 
 ![T2AV-Compass-inspired independent reimplementation](examples/t2av-compass-style-demo.png)
 
-上图把 T2AV 的三段证据关系压缩成一张可运行示例：左侧 radial，中部分布与横向条，右侧三层 sunburst。它是结构迁移示例，不代表 T2AV 的实验结果。
+上图与综合成图使用同一套绘图部件，提供独立的横版总览。它保留左侧 radial、中部分布与横向条、右侧三层 sunburst 的比例关系，不代表 T2AV 的实验结果。
 
 ## 这次整合了什么
 
 | 能力 | 入口 |
 |---|---|
-| 原有流程图、radar、bar、heatmap 与 NJU-LINK token | [绘图原语](scripts/njulink_style.py)、[视觉语法](references/figure-grammar.md) |
+| 完整多模态评测图、独立横版总览 | [成图部件](scripts/compass_panels.py)、[构图说明](references/compass-composition.md) |
+| 基础流程图、radar、bar、heatmap 与 NJU-LINK token | [绘图原语](scripts/njulink_style.py)、[视觉语法](references/figure-grammar.md) |
 | 14 套上游自产模板，原图 + 卡片 + Python，1 套另附 CSV | [可浏览图库索引](gallery/INDEX.md) |
 | 3 张使用 NJU-LINK token 的改绘例子 | [生成脚本](scripts/gallery_examples.py) |
 | 按数据选图、“A 的布局 + B 的配色”、六部件拆解 | [参考工作流](references/gallery-workflow.md) |
@@ -87,13 +107,16 @@ python3 -m venv .venv
 已有目录时更新现有仓库即可。以下命令从仓库根目录运行：
 
 ~~~bash
-# 原有综合示例
+# 综合成图：PNG / PDF / SVG + 字体与合成样本记录
 .venv/bin/python scripts/demo.py --output-dir figures/base
+
+# 跨平台固定使用随仓库分发的 Comic Neue
+.venv/bin/python scripts/demo.py --font portable --output-dir figures/portable
 
 # 三张 NJU-LINK 改绘：PNG / PDF / SVG
 .venv/bin/python scripts/gallery_examples.py --output-dir figures/njulink
 
-# T2AV-Compass 视觉结构独立重绘：PNG / PDF
+# T2AV-Compass 横版总览：PNG / PDF / SVG
 .venv/bin/python scripts/t2av_style_demo.py --output-dir figures/t2av
 
 # 上游模板：复制代码/CSV 到工作目录，并输出 PNG / PDF / SVG
@@ -111,11 +134,7 @@ python3 -m venv .venv
 
 render_gallery.py 只执行本库已审读的模板，输出已存在时要求另选目录。上游模板的数据数组与标签需要按脚本注释替换；这不是对任意 CSV 的自动推断接口。图的 KDE、归一化、堆叠合计与色条含义由 skill 在实际任务中核验。
 
-## 原有综合示例
-
-![NJU-LINK 流程、radar、bar、heatmap 合成示例](examples/njulink-style-demo.png)
-
-由 [demo.py](scripts/demo.py) 生成，所有数值为合成值。可从 [njulink_style.py](scripts/njulink_style.py) 导入 apply_style、draw_pipeline、radar、pastel_bars、heatmap、save_figure。
+默认 `--font reference` 优先使用本机 Chalkboard，与官方 SVG 中的字体一致；缺少时使用随仓库分发的 Comic Neue。`--font portable` 固定使用后者。成图旁的 JSON 记录实际字体、尺寸、种子生成的样本和编码说明；PNG、PDF、SVG 使用同一张 Figure 导出。替换实验结果时编辑 [compass-demo.json](assets/compass-demo.json)，并按真实数据移除模拟标签。
 
 ## 来源与范围
 
@@ -124,6 +143,8 @@ NJU-LINK 视觉观察基于截至 2026-10-06 个人主页列出的 9 篇 Jiaming
 上游固定到 [70898b8](https://github.com/liouhai/plot-is-all-you-need/tree/70898b877dc2455704070e4542db1939ff7d9ec0)。本库引入其 14 套自产示例及图库工具，保留 **Copyright (c) 2026 qc** 和 [MIT 原文](licenses/plot-is-all-you-need-MIT.txt)；上游收集的论文截图明确不属其 MIT 授权，未一并复制。完整列表、变更与文件哈希见 [整合记录](references/upstream-integration.md) 和 [manifest](references/upstream-manifest.json)。
 
 本地 gallery-local/、taste.md、figures/、虚拟环境均被 Git 忽略。相似布局只提醒，完全相同像素才自动跳过；用户编辑过的卡片受保护。
+
+Comic Neue 由 The Comic Neue Project Authors 提供，按 [SIL OFL 1.1](licenses/ComicNeue-OFL.txt) 随仓库分发；固定来源与哈希见 [字体清单](references/demo-fonts.json)。仓库不包含 Chalkboard 字体文件。
 
 ## 验证
 

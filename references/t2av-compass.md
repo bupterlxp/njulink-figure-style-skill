@@ -12,7 +12,7 @@ T2AV-Compass 是 NJU-LINK / Jiaming Wang 公开语料里最适合做“精髓图
 
 [打开官方原图](https://github.com/NJU-LINK/T2AV-Compass/blob/7575ae07cf969c3f5d439644ecb9979862370523/docs/static/images/main_00.jpg) · [raw](https://raw.githubusercontent.com/NJU-LINK/T2AV-Compass/7575ae07cf969c3f5d439644ecb9979862370523/docs/static/images/main_00.jpg)
 
-观察重点：中心圆环把“一个总问题”钉住，六个方向的模型比较形成放射状节奏；中部的密度图和横向条形图提供证据层；右侧三层 sunburst 将同一组 pastel 语义扩展到层级分布。不要抄数值和标签，只迁移这三个证据层的关系。
+观察重点：中心圆环把“一个总问题”钉住，七个方向的模型比较形成放射状节奏；中部的密度图和横向条形图提供证据层；右侧多层 sunburst 交代任务层级。不要抄数值和标签，先迁移这三个证据层的关系。原图的模型色与任务类别色承担不同含义，需要分别记录。
 
 ### 数据/提示词流水线
 
@@ -51,7 +51,7 @@ T2AV-Compass 是 NJU-LINK / Jiaming Wang 公开语料里最适合做“精髓图
 
 [![T2AV-inspired independent style demo](../examples/t2av-compass-style-demo.png)](../examples/t2av-compass-style-demo.png)
 
-这张图只借鉴上面三层关系和视觉部件，使用合成数据，没有复制原图的文字、数字、logo、图标或像素。生成代码在 [t2av_style_demo.py](../scripts/t2av_style_demo.py)，输出 PNG 和 PDF：
+这张图与 [综合成图](../examples/njulink-style-demo.png) 共享绘图部件和合成数据，具体比例、字体、数值编码和已知差异见 [构图说明](compass-composition.md)。生成代码在 [t2av_style_demo.py](../scripts/t2av_style_demo.py)，输出 PNG、PDF、SVG 及字体/样本 JSON：
 
 ```bash
 python scripts/t2av_style_demo.py --output-dir figures/t2av

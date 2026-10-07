@@ -1,0 +1,5 @@
+# Matplotlib emits spaces at the ends of SVG path-coordinate lines.
+examples/*.svg linguist-generated=true whitespace=-blank-at-eol
+examples/*-demo.json linguist-generated=true
+# Preserve the upstream OFL text byte for byte, including its trailing space.
+licenses/ComicNeue-OFL.txt whitespace=-blank-at-eol

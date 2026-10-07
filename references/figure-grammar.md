@@ -94,14 +94,14 @@ sage       #A9C995
 
 ## T2AV-Compass 专属参考层
 
-T2AV-Compass 的主图是本语料里最清晰的“多层证据编辑”例子。它可以作为 NJU-LINK 视觉语法的具体锚点，但不能被解释为 Jiaming Wang 个人的独家风格或官方设计系统。复用时先打开 [T2AV-Compass 参考锚点](t2av-compass.md)，再按下面的关系重画：
+T2AV-Compass 的主图是本语料里最清晰的“多层证据编辑”例子。它可以作为 NJU-LINK 视觉语法的具体锚点，但不能被解释为 Jiaming Wang 个人的独家风格或官方设计系统。复用时先打开 [T2AV-Compass 参考锚点](t2av-compass.md) 和 [完整构图及参数](compass-composition.md)，再按下面的关系重画：
 
 - **总览层：radial compass。** 中心圆/短词固定主题，外围按任务或模态排成 5–8 个方向；每个方向内用一组窄条比较模型，条顶只标关键值，避免把所有数字写成表格。
 - **证据层：distribution + horizontal bars。** 总览旁边放一张密度/分布图，再放 1–2 个横向排序条；它们解释总览差异，不承担新的颜色语义。
 - **层级层：多环 sunburst。** 内环是主任务族，中环是能力维度，外环是细分属性；同一父类在三层保持色相，子类用更浅或更深的同色变体。
 - **流程层：大虚线容器 + 浅色卡片。** 将 source、filter、annotate、check 等阶段放入一个边界明确的容器，短箭头连接；虚线表达“同一流程”，不表达数据不确定性。
 - **多模态层：形状本身承载模态。** 视频使用等宽帧带，音频使用波形/频谱，文本用重点色短句；图标旁保留文字，避免只靠图形猜语义。
-- **编辑层：少量手绘感标签。** 可选 Comic Sans/Chalkboard 类展示字体，但必须提供 DejaVu Sans/Arial 回退；字体模仿不能代替布局、颜色和证据层的匹配。
+- **编辑层：手绘感标签。** 官方 radar SVG 的字形 ID 可确认 Chalkboard。综合图优先使用本机 Chalkboard，缺少时使用仓库内 OFL Comic Neue；指定 `--font portable` 可固定后者。旋转文字调整到正向，长环图标签先缩写或换行，再微调字号。
 
 T2AV 风格图的验收顺序是“中心主题 → 三层证据关系 → 颜色跨面板复用 → 容器和箭头 → 字体与细节”。独立重绘必须换数据、标签、数字和图标，并在图内标记 `INDEPENDENT REIMPLEMENTATION` / `SIMULATED DATA`；参考图中的 logo、原始数值和专有案例不能当作占位素材。
 
